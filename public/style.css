@@ -1,0 +1,225 @@
+/* styles.css */
+
+/* Declare variables */
+:root {
+    --orange: #FF8000;
+    --blue: #2128BF;
+    --green: #28a745;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+  
+  .navbar {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 100px;
+    background: linear-gradient(90deg, var(--orange) 0%, var(--blue) 100%);
+  }
+  
+  #main-header {
+    background: var(--blue);
+    color: white;
+    padding: 20px 0;
+  }
+  
+  #main-header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  #actions .action-btn {
+    margin-bottom: 20px;
+  }
+  
+  .btn-block {
+    width: 100%;
+  }
+  
+  /* Styles for navbar */
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: #fff !important;
+  }
+  
+  .nav-link:hover {
+    color: #ddd !important;
+  }
+  
+  .dropdown-menu {
+    min-width: 200px;
+  }
+  
+  .dropdown-menu a {
+    color: #333 !important;
+  }
+  
+  /* Styles for header */
+  #main-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  /* Styles for action buttons */
+  #actions {
+    padding: 40px 0;
+  }
+  
+  #actions .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  
+  #actions .btn-primary {
+    background-color: var(--blue);
+    border: none;
+  }
+  
+  #actions .btn-success {
+    background-color: var(--blue);
+    border: none;
+  }
+  
+  #actions .btn-warning {
+    background-color: var(--orange);
+    border: none;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    #main-header h1 {
+      font-size: 2rem;
+    }
+  
+    .action-btn {
+      margin-bottom: 15px;
+    }
+  }
+  
+
+.card {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: var(--blue);
+  color: white;
+  padding: 10px;
+  font-size: 1.25rem;
+}
+
+.card-header h4 {
+  margin: 0;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.table thead th {
+  background-color: var(--blue);
+  color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary {
+  background-color: var(--orange);
+  border: none;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: darken(var(--orange), 10%);
+}
+
+.card.text-center {
+  text-align: center;
+}
+
+.card-body-bleu {
+  padding: 20px;
+  background-color: var(--blue)
+}
+
+.card-body-orange {
+  padding: 20px;
+  background-color: var(--orange)
+}
+
+.card.text-white.bg-primary {
+  background-color: var(--blue);
+}
+
+.card.text-white.bg-success {
+  background-color: var(--orange);
+}
+
+.card.text-white.bg-warning {
+  background-color: var(--orange);
+}
+
+.btn-outline-light {
+  color: white;
+  border-color: white;
+}
+
+.btn-outline-light:hover {
+  color: var(--blue);
+  background-color: white;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-header {
+  background-color: var(--blue);
+}
+
+.modal-header .close {
+  color: white;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.custom-file-label::after {
+  content: "Parcourir";
+}
+
+.btn-primary {
+  background-color: var(--orange);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--orange), 10%);
+}
+.modal-header.bg-primary {
+  background-color: var(--blue); /* Utilise la variable bleue */
+  color: white; /* Couleur du texte en blanc */
+}
+.bg-primary {
+  background-color: var(--blue) !important;
+}
+.bg-primary {
+  background-color: var(--blue) !important;
+}
+.bg-primary {
+  background-color: var(--blue) !important;
+}
