@@ -10,6 +10,7 @@ class CultureController extends Controller
 {
     public function store(Request $request)
     {
+        //dd($request);
         $request->validate([
             'type' => 'required|string|max:255',
             'image' => 'required|image|max:3072', // 3 MB max

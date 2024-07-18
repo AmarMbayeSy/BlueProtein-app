@@ -230,6 +230,8 @@
   <!-- MODALS -->
 <!-- ADD PRODUCT MODAL -->
 
+<!-- ADD PRODUCT MODAL -->
+
 <div id="addPostModal" class="modal fade">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -255,32 +257,212 @@
             <small class="text-muted">Taille maximale de 3 Mo</small>
           </div>
           <div class="form-group">
-            <label for="id_avantage">Avantages</label>
-            <select id="id_avantage" name="id_avantage" class="form-control" required>
+            <label for="id_avantage_1">Avantage 1</label>
+            <select id="id_avantage_1" name="id_avantage_1" class="form-control" required>
               @foreach($avantages as $avantage)
                 <option value="{{ $avantage->id }}">{{ $avantage->avantage_produit }}</option>
               @endforeach
             </select>
           </div>
           <div class="form-group">
-            <label for="id_composition">Composition</label>
-            <select id="id_composition" name="id_composition" class="form-control" required>
+            <label for="id_avantage_2">Avantage 2</label>
+            <select id="id_avantage_2" name="id_avantage_2" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($avantages as $avantage)
+                <option value="{{ $avantage->id }}">{{ $avantage->avantage_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_avantage_3">Avantage 3</label>
+            <select id="id_avantage_3" name="id_avantage_3" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($avantages as $avantage)
+                <option value="{{ $avantage->id }}">{{ $avantage->avantage_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_avantage_4">Avantage 4</label>
+            <select id="id_avantage_4" name="id_avantage_4" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($avantages as $avantage)
+                <option value="{{ $avantage->id }}">{{ $avantage->avantage_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_avantage_5">Avantage 5</label>
+            <select id="id_avantage_5" name="id_avantage_5" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($avantages as $avantage)
+                <option value="{{ $avantage->id }}">{{ $avantage->avantage_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_avantage_6">Avantage 6</label>
+            <select id="id_avantage_6" name="id_avantage_6" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($avantages as $avantage)
+                <option value="{{ $avantage->id }}">{{ $avantage->avantage_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_composition_1">Composition 1</label>
+            <select id="id_composition_1" name="id_composition_1" class="form-control" required>
               @foreach($compositions as $composition)
                 <option value="{{ $composition->id }}">{{ $composition->composition_produit }}</option>
               @endforeach
             </select>
           </div>
           <div class="form-group">
-            <label for="id_utilisation">Utilisation</label>
-            <select id="id_utilisation" name="id_utilisation" class="form-control" required>
+            <label for="id_composition_2">Composition 2</label>
+            <select id="id_composition_2" name="id_composition_2" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($compositions as $composition)
+                <option value="{{ $composition->id }}">{{ $composition->composition_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_composition_3">Composition 3</label>
+            <select id="id_composition_3" name="id_composition_3" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($compositions as $composition)
+                <option value="{{ $composition->id }}">{{ $composition->composition_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_composition_4">Composition 4</label>
+            <select id="id_composition_4" name="id_composition_4" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($compositions as $composition)
+                <option value="{{ $composition->id }}">{{ $composition->composition_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_composition_5">Composition 5</label>
+            <select id="id_composition_5" name="id_composition_5" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($compositions as $composition)
+                <option value="{{ $composition->id }}">{{ $composition->composition_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_composition_6">Composition 6</label>
+            <select id="id_composition_6" name="id_composition_6" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($compositions as $composition)
+                <option value="{{ $composition->id }}">{{ $composition->composition_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_utilisation_1">Utilisation 1</label>
+            <select id="id_utilisation_1" name="id_utilisation_1" class="form-control" required>
               @foreach($utilisations as $utilisation)
                 <option value="{{ $utilisation->id }}">{{ $utilisation->mode_emploi_1 }}</option>
               @endforeach
             </select>
           </div>
           <div class="form-group">
-            <label for="id_precaution">Precaution</label>
-            <select id="id_precaution" name="id_precaution" class="form-control" required>
+            <label for="id_utilisation_2">Utilisation 2</label>
+            <select id="id_utilisation_2" name="id_utilisation_2" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($utilisations as $utilisation)
+                <option value="{{ $utilisation->id }}">{{ $utilisation->mode_emploi_1 }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_utilisation_3">Utilisation 3</label>
+            <select id="id_utilisation_3" name="id_utilisation_3" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($utilisations as $utilisation)
+                <option value="{{ $utilisation->id }}">{{ $utilisation->mode_emploi_1 }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_utilisation_4">Utilisation 4</label>
+            <select id="id_utilisation_4" name="id_utilisation_4" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($utilisations as $utilisation)
+                <option value="{{ $utilisation->id }}">{{ $utilisation->mode_emploi_1 }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_utilisation_5">Utilisation 5</label>
+            <select id="id_utilisation_5" name="id_utilisation_5" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($utilisations as $utilisation)
+                <option value="{{ $utilisation->id }}">{{ $utilisation->mode_emploi_1 }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_utilisation_6">Utilisation 6</label>
+            <select id="id_utilisation_6" name="id_utilisation_6" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($utilisations as $utilisation)
+                <option value="{{ $utilisation->id }}">{{ $utilisation->mode_emploi_1 }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_precaution_1">Precaution 1</label>
+            <select id="id_precaution_1" name="id_precaution_1" class="form-control" required>
+              @foreach($precautions as $precaution)
+                <option value="{{ $precaution->id }}">{{ $precaution->precaution_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_precaution_2">Precaution 2</label>
+            <select id="id_precaution_2" name="id_precaution_2" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($precautions as $precaution)
+                <option value="{{ $precaution->id }}">{{ $precaution->precaution_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_precaution_3">Precaution 3</label>
+            <select id="id_precaution_3" name="id_precaution_3" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($precautions as $precaution)
+                <option value="{{ $precaution->id }}">{{ $precaution->precaution_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_precaution_4">Precaution 4</label>
+            <select id="id_precaution_4" name="id_precaution_4" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($precautions as $precaution)
+                <option value="{{ $precaution->id }}">{{ $precaution->precaution_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_precaution_5">Precaution 5</label>
+            <select id="id_precaution_5" name="id_precaution_5" class="form-control">
+              <option value="">Sélectionner</option>
+              @foreach($precautions as $precaution)
+                <option value="{{ $precaution->id }}">{{ $precaution->precaution_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_precaution_6">Precaution 6</label>
+            <select id="id_precaution_6" name="id_precaution_6" class="form-control">
+              <option value="">Sélectionner</option>
               @foreach($precautions as $precaution)
                 <option value="{{ $precaution->id }}">{{ $precaution->precaution_produit }}</option>
               @endforeach
@@ -319,8 +501,17 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="id_certification">Certification</label>
-            <select id="id_certification" name="id_certification" class="form-control" required>
+            <label for="id_certification_1">Certification 1</label>
+            <select id="id_certification_1" name="id_certification_1" class="form-control" required>
+              @foreach($certifications as $certification)
+                <option value="{{ $certification->id }}">{{ $certification->certification_produit }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="id_certification_2">Certification 2</label>
+            <select id="id_certification_2" name="id_certification_2" class="form-control">
+              <option value="">Sélectionner</option>
               @foreach($certifications as $certification)
                 <option value="{{ $certification->id }}">{{ $certification->certification_produit }}</option>
               @endforeach
@@ -334,6 +525,7 @@
     </div>
   </div>
 </div>
+
 
 
 
