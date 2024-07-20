@@ -16,7 +16,7 @@ class BlocController extends Controller
             'image' => 'required|image|max:3072', // 3 MB max
             ]);
 
-        $path = $request->file('image')->store('Blocs');
+        $path = $request->file('image')->store('Blocs', 'public');
 
         $Blocs = new Bloc;
         $Blocs->titre_bloc= $request->titre;

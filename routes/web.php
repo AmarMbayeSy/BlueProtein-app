@@ -18,17 +18,31 @@ use App\Http\Controllers\ProduitController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard-blogen-theme-master.index');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/', function () {
+        return view('dashboard-blogen-theme-master.index');
+    });
+    Route::get('/posts', function () {
+        return view('dashboard-blogen-theme-master.posts');
+    });
+    Route::get('/', [ProduitController::class, 'create'])->name('produits.create');
+    Route::get('/produits/{produit}', [ProduitController::class, 'show'])->name('produits.show');
+    Route::delete('/produits/{produit}', [ProduitController::class, 'destroy'])->name('produits.destroy');
 });
-Route::get('/posts', function () {
-    return view('dashboard-blogen-theme-master.posts');
-});
+
+require __DIR__.'/auth.php';
+
+
 Route::post('/compositions', [CompositionController::class, 'store'])->name('compositions.store');
 Route::post('/avantages', [AvantageController::class, 'store'])->name('avantages.store');
 Route::post('/utilisations', [UtilisationController::class, 'store'])->name('utilisations.store');
@@ -39,7 +53,7 @@ Route::post('/blocs', [BlocController::class, 'store'])->name('blocs.store');
 Route::post('/revendeurs', [RevendeurController::class, 'store'])->name('revendeurs.store');
 Route::post('/etapes', [EtapeController::class, 'store'])->name('etapes.store');
 Route::post('/certifications', [CertificationController::class, 'store'])->name('certifications.store');
-Route::get('/', [ProduitController::class, 'create'])->name('produits.create');
+
 Route::post('/produits', [ProduitController::class, 'store'])->name('produits.store');
-Route::get('/produits/{produit}', [ProduitController::class, 'show'])->name('produits.show');
-Route::delete('/produits/{produit}', [ProduitController::class, 'destroy'])->name('produits.destroy');
+
+

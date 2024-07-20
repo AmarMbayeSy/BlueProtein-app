@@ -46,30 +46,19 @@
         </ul>
 
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown mr-3">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-              <i class="fas fa-user"></i> Connexion
-            </a>
-            <div class="dropdown-menu">
-              <a href="profile.html" class="dropdown-item">
-                <i class="fas fa-user-circle"></i> Profil
-              </a>
-              <a href="settings.html" class="dropdown-item">
-                <i class="fas fa-cog"></i> Paramètres
-              </a>
+          <form method="POST" action="{{ route('logout') }}">
+          @csrf
+          <li class="nav-item">
+            <div class="nav-link">
+            <button type="submit" class="fas fa-user-times">Deconnexion</button>
             </div>
           </li>
-          <li class="nav-item">
-            <a href="login.html" class="nav-link">
-              <i class="fas fa-user-times"></i> Deconnexion
-            </a>
-          </li>
+          </form>
         </ul>
       </div>
     </div>
   </nav>
-  
-  <!-- EN-TÊTE -->
+
  <section id="actions" class="bg-light mb-4 py-4">
     <div class="container">
       <div class="row">

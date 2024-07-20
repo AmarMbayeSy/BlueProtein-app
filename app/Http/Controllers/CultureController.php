@@ -16,7 +16,7 @@ class CultureController extends Controller
             'image' => 'required|image|max:3072', // 3 MB max
         ]);
 
-        $path = $request->file('image')->store('cultures');
+        $path = $request->file('image')->store('cultures','public');
 
         $culture = new Culture;
         $culture->culture_produit = $request->type;

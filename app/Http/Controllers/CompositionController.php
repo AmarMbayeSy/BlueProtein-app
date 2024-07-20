@@ -15,7 +15,7 @@ class CompositionController extends Controller
             'image' => 'required|image|max:3072', // 3 MB max
         ]);
 
-        $path = $request->file('image')->store('compositions');
+        $path = $request->file('image')->store('compositions', 'public');
 
         $composition = new Composition;
         $composition->composition_produit = $request->type;

@@ -15,7 +15,7 @@ class EtapeController extends Controller
             'image' => 'required|image|max:3072', // 3 MB max
         ]);
 
-        $path = $request->file('image')->store('etapes');
+        $path = $request->file('image')->store('etapes','public');
 
         $etape = new Etape;
         $etape->etape_produit = $request->type;

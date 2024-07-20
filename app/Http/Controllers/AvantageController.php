@@ -16,7 +16,7 @@ class AvantageController extends Controller
             'image' => 'required|image|max:3072', // 3 MB max
         ]);
 
-        $path = $request->file('image')->store('avantages');
+        $path = $request->file('image')->store('avantages','public');
 
         $avantage = new Avantage;
         $avantage->avantage_produit = $request->type;

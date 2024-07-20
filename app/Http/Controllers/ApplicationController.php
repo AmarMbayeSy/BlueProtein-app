@@ -15,7 +15,7 @@ class ApplicationController extends Controller
             'image' => 'required|image|max:3072', // 3 MB max
         ]);
 
-        $path = $request->file('image')->store('applications');
+        $path = $request->file('image')->store('applications','public');
 
         $application = new Application;
         $application->application_produit = $request->type;

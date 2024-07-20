@@ -15,7 +15,7 @@ class CertificationController extends Controller
             'type' => 'required|string|max:255',
         ]);
 
-        $path = $request->file('image')->store('certifications');
+        $path = $request->file('image')->store('certifications','public');
 
         $certification = new Certification;
 

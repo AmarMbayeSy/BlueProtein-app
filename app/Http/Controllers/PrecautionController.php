@@ -15,7 +15,7 @@ class PrecautionController extends Controller
             'image' => 'required|image|max:3072', // 3 MB max
         ]);
 
-        $path = $request->file('image')->store('precautions');
+        $path = $request->file('image')->store('precautions','public');
 
         $precaution = new Precaution;
         $precaution->precaution_produit = $request->type;
