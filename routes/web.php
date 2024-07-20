@@ -57,3 +57,18 @@ Route::post('/certifications', [CertificationController::class, 'store'])->name(
 Route::post('/produits', [ProduitController::class, 'store'])->name('produits.store');
 
 
+Route::get('/apropos', function () {
+    return view('site.apropos');
+});
+Route::get('/partenaires', function () {
+    return view('site.partenaires');
+});
+Route::get('/produits', function () {
+    return view('site.produits');
+});
+Route::get('/Services', function () {
+    return view('site.Services');
+});
+Route::get('/try', function () {
+    return view('site.try');
+});

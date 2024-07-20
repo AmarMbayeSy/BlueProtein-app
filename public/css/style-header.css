@@ -1,0 +1,299 @@
+
+:root {
+    --orange: #FF8000;
+    --blue: #2128BF;
+    --green: #28a745;
+    --white:#ffffff;
+  }
+.navbar{
+    background:linear-gradient(90deg, var(--orange) 0%, var(--blue) 100%);
+    height: 80px;
+    margin: 5px;
+    padding: 0.2rem;
+    border-radius: 16px;
+
+}
+.navbar-brand{
+    font-weight: 500;
+    color: rgb(255, 111, 1);
+    font-size: 15pxx;
+    transition: 0.3s;
+    
+}
+.logo{
+    width: 60px;
+    height: 60px;
+    clip-path: circle(50%);
+}
+.login-button{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    margin-right: 12px; /* Ajoute un espace de 10px entre les boutons */
+}
+.login-button:last-child {
+    margin-right: 0; /* Supprime la marge du dernier bouton */
+}
+.login-button:hover{
+  background: linear-gradient(90deg, var(--orange) 0%, var(--blue) 100%);
+}
+.language-selector {
+  display: inline-block;
+  position: relative;
+  
+ 
+}
+
+.language-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.language-button span {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.language-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #FFF5E1;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 25px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.language-dropdown button {
+  background-color: #FFF5E1;
+  color: #FFA500;
+  border: none;
+  padding: 8px 20px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-dropdown button:hover {
+  background-color: #FFD700;
+}
+
+.language-selector:hover .language-dropdown {
+  display: block;
+}
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+.nav-link{
+    color: rgb(12, 4, 4);
+    font-weight: 600;
+    position: relative;
+}
+.nav-link:hover, .nav-link :active{
+    color: black;
+
+}
+@media(min-width:991px) {
+.nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: blue;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100% ;
+    visibility: visible;
+}             
+}
+
+
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+ 
+/* image */
+.fixed-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 80%; /* Pour s'assurer que le texte ne dépasse pas l'image */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+  }
+  
+  .image-text {
+    font-weight: bold;
+  }
+  
+  /* Assombrir les images */
+  .carousel-item img {
+    filter: brightness(0.5); /* Diminue l'éclairage des images */
+    max-height: 500px; /* Adjust the value as per your requirement */
+    object-fit: cover;
+  }
+  
+  
+  /* Responsive text size */
+  @media (min-width: 768px) {
+    .image-text {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .image-text {
+      font-size: 1rem;
+    }
+  }
+  /* image */
+
+
+/* message */
+  #message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff5e00e1;
+}
+
+.title-logo {
+    margin-right: 10px; /* Espace entre l'image et le texte */
+    width: 50px; /* Largeur de l'image */
+    height: 50px; /* Hauteur de l'image */
+}
+.title + p {
+    margin-left: calc(58px + 10px); /* Ajuster cette valeur selon la taille de l'image et l'espace souhaité */
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #09090a;
+    width: 100%;
+}
+  /* message */
+
+
+/* background-image */   
+ .background-image {
+    background: url('../immmmage/sos1.jpeg') no-repeat center center fixed;
+  background-size: cover; /* Couvre tout l'espace disponible */
+  width: 100vw; /* Largeur de 100% de la largeur de la fenêtre */
+  height: 70vh; /* Hauteur de 100% de la hauteur de la fenêtre */
+  display: inline-block; 
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+ 
+    }
+
+
+    .text-overlay {
+        position: absolute;
+        bottom: 10rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+
+    .text-overlay h2 {
+        color: #1E90FF;
+        font-size: 3rem;
+    }
+    /* Media queries for mobile devices */
+@media (max-width: 480px) {
+.text-overlay {
+position: relative;
+font-size: 10px;
+bottom: 10rem;
+font-size: xx-small;
+}
+.background-image img {
+width: 100%;
+height: 20rem;
+
+}
+
+}
+/* For larger screens */
+@media (min-width: 992px) {
+.text-overlay {
+display: block;
+position: relative;
+font-size: 10px;
+bottom: 20rem;
+font-size:40rem;
+}
+.background-image img {
+width: 100%;
+height: 90rem;
+
+}
+
+}
+
+
+@media (min-width: 481px) {
+.text-overlay {
+display: block;
+position: relative;
+font-size: 10px;
+bottom: 22rem;
+font-size:larger;
+}
+.background-image img {
+width: 100%;
+height: 40rem;
+
+}
+}
+/* background-image */
+  
+  

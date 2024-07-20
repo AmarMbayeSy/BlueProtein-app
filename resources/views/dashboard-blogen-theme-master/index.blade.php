@@ -46,6 +46,19 @@
         </ul>
 
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown mr-3">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              <i class="fas fa-user"></i> Connexion
+            </a>
+            <div class="dropdown-menu">
+              <a href="profile.html" class="dropdown-item">
+                <i class="fas fa-user-circle"></i> Profil
+              </a>
+              <a href="settings.html" class="dropdown-item">
+                <i class="fas fa-cog"></i> Paramètres
+              </a>
+            </div>
+          </li>
           <form method="POST" action="{{ route('logout') }}">
           @csrf
           <li class="nav-item">
@@ -58,7 +71,6 @@
       </div>
     </div>
   </nav>
-
  <section id="actions" class="bg-light mb-4 py-4">
     <div class="container">
       <div class="row">
