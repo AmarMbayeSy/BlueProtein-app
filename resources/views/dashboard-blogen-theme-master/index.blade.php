@@ -141,7 +141,7 @@
 <main id="posts">
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-8">
         <div class="card">
           <div class="card-header">
             <h4>Catalogue de produit</h4>
@@ -179,34 +179,258 @@
         </div>
       </div>
 
-      <div class="col-md-3">
-        <div class="card text-center text-white bg-primary mb-3 custom-card">
-          <div class="card-body">
-            <h3>Produits</h3>
-            <h4 class="display-4">
-              <i class="fas fa-pencil-alt"></i> {{ $nombreProduits }}
-            </h4>
-            <a href="/posts" class="btn btn-sm btn-outline-light">Voir Tous</a>
+      <div class="col-md-4">
+        <div class="row">
+          <!-- Carte Produits -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h3>Produits</h3>
+                <h4 class="display-4">
+                  <i class="fas fa-pencil-alt"></i> {{ $nombreProduits }}
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                  <ul class="dropdown-menu">
+                  @foreach($produits as $produit)
+                    <li><a class="dropdown-item" href="#" onclick="showProductModal({{ $produit }})">{{ $produit->nom_produit }}</a></li>
+                  @endforeach
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carte Distributeurs -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h5>Distributeurs</h5>
+                <h4 class="display-4">
+                  <i class="fas fa-users"></i> 4
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                  
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="card text-center text-white bg-success mb-3 custom-card">
-          <div class="card-body">
-            <h3>Distributeurs</h3>
-            <h4 class="display-4">
-              <i class="fas fa-users"></i> 4
-            </h4>
-            <a href="categories.html" class="btn btn-sm btn-outline-light">Voir Toutes</a>
+        <div class="row">
+          <!-- Carte Bloc -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h5>Bloc</h5>
+                <h4 class="display-4">
+                  <i class="fas fa-folder"></i> 5
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carte Avantages -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h5>Avantages</h5>
+                <h4 class="display-4">
+                  <i class="fas fa-folder"></i> {{ $nombreAvantages }}
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                  <ul class="dropdown-menu">
+                    @foreach($avantages as $avantage)
+                      <li><a class="dropdown-item" href="#">{{ $avantage->avantage_produit }}</a></li>
+                    @endforeach
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="card text-center text-white bg-warning mb-3 custom-card">
-          <div class="card-body">
-            <h3>Bloc</h3>
-            <h4 class="display-4">
-              <i class="fas fa-folder"></i> 5
-            </h4>
-            <a href="users.html" class="btn btn-sm btn-outline-light">Voir Tous</a>
+        <div class="row">
+          <!-- Carte Utilisations -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h5>Utilisations</h5>
+                <h4 class="display-4">
+                  <i class="fas fa-folder"></i> {{ $nombreUtilisations }}
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                  <ul class="dropdown-menu">
+                    @foreach($utilisations as $utilisation)
+                      <li><a class="dropdown-item" href="#">{{ $utilisation->mode_emploi_1 }}</a></li>
+                    @endforeach
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carte Certifications -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h5>Certifications</h5>
+                <h4 class="display-4">
+                  <i class="fas fa-folder"></i> {{ $nombreCertifications }}
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                  <ul class="dropdown-menu">
+                    @foreach($certifications as $certification)
+                      <li><a class="dropdown-item" href="#">{{ $certification->certification_produit }}</a></li>
+                    @endforeach
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Carte Etapes Cultures -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h5>Etapes cultures</h5>
+                <h4 class="display-4">
+                  <i class="fas fa-folder"></i> {{ $nombreEtapes }}
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                  <ul class="dropdown-menu">
+                    @foreach($etapes as $etapeCulture)
+                      <li><a class="dropdown-item" href="#">{{ $etapeCulture->etape_produit }}</a></li>
+                    @endforeach
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carte Collaborateurs -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h5>Collaborateurs</h5>
+                <h4 class="display-4">
+                  <i class="fas fa-folder"></i> 5
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Carte Cultures -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h5>Cultures</h5>
+                <h4 class="display-4">
+                  <i class="fas fa-folder"></i> {{ $nombreCultures }}
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                  <ul class="dropdown-menu">
+                    @foreach($cultures as $culture)
+                      <li><a class="dropdown-item" href="#">{{ $culture->culture_produit }}</a></li>
+                    @endforeach
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carte Compositions -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h5>Compositions</h5>
+                <h4 class="display-4">
+                  <i class="fas fa-folder"></i> {{ $nombreCompositions }}
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                  <ul class="dropdown-menu">
+                    @foreach($compositions as $composition)
+                      <li><a class="dropdown-item" href="#">{{ $composition->composition_produit }}</a></li>
+                    @endforeach
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Carte Précautions -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h5>Précautions</h5>
+                <h4 class="display-4">
+                  <i class="fas fa-folder"></i> {{ $nombrePrecautions }}
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                  <ul class="dropdown-menu">
+                    @foreach($precautions as $precaution)
+                      <li><a class="dropdown-item" href="#">{{ $precaution->precaution_produit }}</a></li>
+                    @endforeach
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carte Applications -->
+          <div class="col-md-6">
+            <div class="card text-center text-white bg-primary mb-3 custom-card">
+              <div class="card-body">
+                <h5>Applications</h5>
+                <h4 class="display-4">
+                  <i class="fas fa-folder"></i> {{ $nombreApplications }}
+                </h4>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Voir
+                  </button>
+                  <ul class="dropdown-menu">
+                    @foreach($applications as $application)
+                      <li><a class="dropdown-item" href="#">{{ $application->application_produit }}</a></li>
+                    @endforeach
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -214,6 +438,7 @@
   </div>
 </main>
 
+ 
 
   <!-- FOOTER -->
   <footer id="main-footer" class="text-white bg-dark mt-5 py-4">
@@ -902,9 +1127,9 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
-
+  <script src="./SCRIPT/script-swipe.js"></script>
   <script>
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());

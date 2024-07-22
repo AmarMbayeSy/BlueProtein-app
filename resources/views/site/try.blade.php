@@ -159,139 +159,23 @@
       <div class="product"> <img src="./immmmage/fleur.png" alt="fleur" class="logo">Nos produits dediés à votre agriculture</div>
      </section>
 <!-- unique-collection -->
-    <section class="unique-collection">
-      <div class="swiper unique-swiper">
+<section class="unique-collection">
+    <div class="swiper unique-swiper">
         <div class="swiper-wrapper">
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <div class="unique-content swiper-slide">
-            <img src="./immmmage/image.jpeg" alt="">
-            <div class="unique-text-content">
-              <h3>Photography</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus ratione nesciunt atque, dolores vel
-                culpa debitis officia expedita unde?</p>
-              <button class="unique-btn">Read more</button>
-            </div>
-          </div>
-          <!-- other swiper slides -->
+            @foreach($produits as $produit)
+                <div class="unique-content swiper-slide">
+                    <img src="{{ asset('storage/' . $produit->image_produit) }}" alt="{{ $produit->nom_produit }}">
+                    <div class="unique-text-content">
+                        <h3>{{ $produit->nom_produit }}</h3>
+                        <p>{{ $produit->description1_produit }}</p>
+                        <button class="unique-btn">Read more</button>
+                    </div>
+                </div>
+            @endforeach
         </div>
-      </div>
-    </section>
+    </div>
+</section>
+
     <!-- end of unique section -->
     
     

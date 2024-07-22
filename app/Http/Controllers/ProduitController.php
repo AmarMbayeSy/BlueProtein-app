@@ -19,16 +19,63 @@ class ProduitController extends Controller
     public function create()
     {
         $avantages = Avantage::all();
+        $nombreAvantages = $avantages->count();
         $compositions = Composition::all();
+        $nombreCompositions = $compositions->count();
         $utilisations = Utilisation::all();
+        $nombreUtilisations = $utilisations->count();
         $precautions = Precaution::all();
+        $nombrePrecautions = $precautions->count();
         $applications = Application::all();
+        $nombreApplications = $applications->count();
         $cultures = Culture::all();
+        $nombreCultures = $cultures->count();
         $etapes = Etape::all();
+        $nombreEtapes = $etapes->count();
         $certifications = Certification::all();
+        $nombreCertifications = $certifications->count();
         $produits = Produit::all();
         $nombreProduits = $produits->count();
-        return view('dashboard-blogen-theme-master.index', compact('avantages', 'compositions', 'utilisations', 'precautions', 'applications', 'cultures', 'etapes', 'certifications', 'produits', 'nombreProduits'));
+        return view('dashboard-blogen-theme-master.index', compact('avantages', 'compositions', 'utilisations',
+        'precautions', 'applications', 'cultures', 'etapes', 
+        'certifications', 'produits', 'nombreProduits',
+   'nombreCertifications','nombreEtapes','nombreCultures',
+'nombreApplications','nombrePrecautions','nombreUtilisations',
+'nombreCompositions','nombreAvantages'));
+    }
+
+    public function create_accueil()
+    {
+        $avantages = Avantage::all();
+        $nombreAvantages = $avantages->count();
+        $compositions = Composition::all();
+        $nombreCompositions = $compositions->count();
+        $utilisations = Utilisation::all();
+        $nombreUtilisations = $utilisations->count();
+        $precautions = Precaution::all();
+        $nombrePrecautions = $precautions->count();
+        $applications = Application::all();
+        $nombreApplications = $applications->count();
+        $cultures = Culture::all();
+        $nombreCultures = $cultures->count();
+        $etapes = Etape::all();
+        $nombreEtapes = $etapes->count();
+        $certifications = Certification::all();
+        $nombreCertifications = $certifications->count();
+        $produits = Produit::all();
+        $nombreProduits = $produits->count();
+        $revendeurs=Revendeur::all();
+        $nombreRevendeurs = $revendeurs->count();
+        $blocs=Bloc::all();
+        $nombreBlocs = $blocs->count();
+
+        return view('site.try', compact('avantages', 'compositions', 'utilisations',
+                                         'precautions', 'applications', 'cultures', 'etapes', 
+                                         'certifications', 'produits', 'nombreProduits',
+                                        'revendeurs','blocs','nombreBlocs','nombreRevendeurs',
+                                    'nombreCertifications','nombreEtapes','nombreCultures',
+                                'nombreApplications','nombrePrecautions','nombreUtilisations',
+                            'nombreCompositions','nombreAvantages'));
     }
 
     // Stocker le produit
