@@ -30,14 +30,14 @@
     height: 500px;
 }
 
-.additional-news-cards {
+.large-news-cards {
     position: relative;
     bottom: 470px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     flex-basis: 50%;
-    margin-left: calc(21% + 4%);
+    margin-left: calc(21% + 4%);    
 }
 
 .additional-news-card {

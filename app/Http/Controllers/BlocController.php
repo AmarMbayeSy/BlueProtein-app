@@ -26,4 +26,12 @@ class BlocController extends Controller
 
         return redirect()->back()->with('success', 'Bloc ajoutée avec succès.');
     }
+
+    
+    public function create_actualite()
+    {
+        $blocs = Bloc::all();
+        $nombreBlocs = $blocs->count();
+        return view('site.try', compact('blocs','nombreBlocs'));
+    }
 }

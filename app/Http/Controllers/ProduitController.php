@@ -12,6 +12,8 @@ use App\Models\Application;
 use App\Models\Culture;
 use App\Models\Etape;
 use App\Models\Certification;
+use App\Models\Bloc;
+use View;
 
 class ProduitController extends Controller
 {
@@ -39,9 +41,9 @@ class ProduitController extends Controller
         return view('dashboard-blogen-theme-master.index', compact('avantages', 'compositions', 'utilisations',
         'precautions', 'applications', 'cultures', 'etapes', 
         'certifications', 'produits', 'nombreProduits',
-   'nombreCertifications','nombreEtapes','nombreCultures',
-'nombreApplications','nombrePrecautions','nombreUtilisations',
-'nombreCompositions','nombreAvantages'));
+        'nombreCertifications','nombreEtapes','nombreCultures',
+        'nombreApplications','nombrePrecautions','nombreUtilisations',
+        'nombreCompositions','nombreAvantages'));
     }
 
     public function create_accueil()
@@ -64,18 +66,15 @@ class ProduitController extends Controller
         $nombreCertifications = $certifications->count();
         $produits = Produit::all();
         $nombreProduits = $produits->count();
-        $revendeurs=Revendeur::all();
-        $nombreRevendeurs = $revendeurs->count();
-        $blocs=Bloc::all();
+        $blocs = Bloc::all();
         $nombreBlocs = $blocs->count();
-
-        return view('site.try', compact('avantages', 'compositions', 'utilisations',
-                                         'precautions', 'applications', 'cultures', 'etapes', 
-                                         'certifications', 'produits', 'nombreProduits',
-                                        'revendeurs','blocs','nombreBlocs','nombreRevendeurs',
-                                    'nombreCertifications','nombreEtapes','nombreCultures',
-                                'nombreApplications','nombrePrecautions','nombreUtilisations',
-                            'nombreCompositions','nombreAvantages'));
+        
+        return View::make('site.try')->with(compact('avantages', 'compositions', 'utilisations',
+        'precautions', 'applications', 'cultures', 'etapes', 
+        'certifications', 'produits', 'nombreProduits',
+   'nombreCertifications','nombreEtapes','nombreCultures',
+'nombreApplications','nombrePrecautions','nombreUtilisations',
+'nombreCompositions','nombreAvantages','blocs','nombreBlocs'));
     }
 
     // Stocker le produit

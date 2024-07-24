@@ -42,7 +42,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/try', [ProduitController::class, 'create_accueil']);
+ Route::get('/try', [ProduitController::class, 'create_accueil']);
 Route::post('/compositions', [CompositionController::class, 'store'])->name('compositions.store');
 Route::post('/avantages', [AvantageController::class, 'store'])->name('avantages.store');
 Route::post('/utilisations', [UtilisationController::class, 'store'])->name('utilisations.store');
