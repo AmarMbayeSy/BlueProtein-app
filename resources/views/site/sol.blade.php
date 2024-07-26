@@ -66,61 +66,69 @@
 
 <body>
     <!-- navbar -->
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand me-auto" href="#"> <img src="./immmmage/6fef3dd9faf34f158d1563fcd8052d6c.jpeg" alt="logo" class="logo"></a>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+             
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 " aria-current="page" href="./apropos.html">A propos</a>
+                            <a class="nav-link mx-lg-2" aria-current="page" href="./apropos">A propos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="./try.html">Accueil</a>
+                            <a class="nav-link mx-lg-2 active" href="./try">Accueil</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link mx-lg-2  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Produits
                             </a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="./produits.html">Germination</a></li>
-                              <li><a class="dropdown-item" href="./produits.html">Semis</a></li>
+                              <li><a class="dropdown-item" href="./produits">Germination</a></li>
+                              <li><a class="dropdown-item" href="./produits">Semis</a></li>
                               <li>
                                 <hr class="dropdown-divider">
                               </li>
-                              <li><a class="dropdown-item" href="./produits.html">Végététative</a></li>
-                              <li><a class="dropdown-item" href="./produits.html">Floraison</a></li>
+                              <li><a class="dropdown-item" href="./produits">Végététative</a></li>
+                              <li><a class="dropdown-item" href="./produits">Floraison</a></li>
                             </ul>
-                        </li>
+                          </li>
+                         
                         <li class="nav-item dropdown">
                             <a class="nav-link mx-lg-2  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Services
                             </a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="./Services.html">Agriculteur</a></li>
-                              <li><a class="dropdown-item" href="./Services.html">Revendeur</a></li>
-                             
+                              <li><a class="dropdown-item" href="./Services">Agriculteur</a></li>
+                              <li><a class="dropdown-item" href="./Services">Revendeur</a></li>
+                            
                             </ul>
-                        </li>
+                          </li>
                         <li class="nav-item">
-                            <a class="nav-link active mx-lg-2" href="./sol.html">Nos produits sur vos sols</a>
+                            <a class="nav-link mx-lg-2" href="./sol">Nos produits sur vos sols</a>
                         </li>
+
                     </ul>
+
                 </div>
             </div>
             <a href="#" class="login-button">Nous Rejoindre </a>
             <a href="#" class="login-button">Contact</a>
-             <span class="language-selector">
+            <span class="language-selector">
               <a href="#" class="language-button">FR <span>&#9660;</span></a>
               <a href="#" class="language-dropdown">  <button>EN</button></a>
           </span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         </div>
     </nav>
     <!-- End Navbar -->

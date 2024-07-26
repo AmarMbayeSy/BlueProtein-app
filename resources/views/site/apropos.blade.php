@@ -38,20 +38,20 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link mx-lg-2 active" aria-current="page" href="./apropos">A propos</a>
+                        <a class="nav-link mx-lg-2 active" aria-current="page" href="./apropos.html">A propos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-lg-2" href="./try">Accueil</a>
+                        <a class="nav-link mx-lg-2" href="./try.html">Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link mx-lg-2  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Produits
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="./produits">Germination</a></li>
-                          <li><a class="dropdown-item" href="./produits">Semis</a></li>
-                          <li><a class="dropdown-item" href="./produits">Végétative</a></li>
-                          <li><a class="dropdown-item" href="./produits">Floraison</a></li>
+                          <li><a class="dropdown-item" href="./produits.html">Germination</a></li>
+                          <li><a class="dropdown-item" href="./produits.html">Semis</a></li>
+                          <li><a class="dropdown-item" href="./produits.html">Végétative</a></li>
+                          <li><a class="dropdown-item" href="./produits.html">Floraison</a></li>
                         </ul>
                       </li>
                     <li class="nav-item dropdown">
@@ -59,12 +59,12 @@
                           Services
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="./Services">Agriculteur</a></li>
-                          <li><a class="dropdown-item" href=./Services">Revendeurs</a></li>
+                          <li><a class="dropdown-item" href="./Services.html">Agriculteur</a></li>
+                          <li><a class="dropdown-item" href="./Services.html">Revendeurs</a></li>
                         </ul>
                       </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-lg-2" href="#">Nos produits sur vos sols</a>
+                        <a class="nav-link mx-lg-2" href="./sol.html">Nos produits sur vos sols</a>
                     </li>
 
                 </ul>
@@ -73,7 +73,10 @@
         </div>
         <a href="#" class="login-button">Nous Rejoindre </a>
         <a href="#" class="login-button">Contact</a>
-
+        <span class="language-selector">
+            <a href="#" class="language-button">FR <span>&#9660;</span></a>
+            <a href="#" class="language-dropdown">  <button>EN</button></a>
+        </span>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -82,14 +85,14 @@
 </nav>
 <!-- End Navbar -->
  <main>
-    <section class="images position-relative" style="height: 400px;">
+    <section class="images position-relative" style="height: 500px;filter: brightness(80%);">
       <div class="row h-100">
         <div class="h-100">
-          <img src="./immmmage/voiture.jpeg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+          <img src="./immmmage/apropoos.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
         </div>
       </div>
       <div class="fixed-text">
-        <span class="image-text">Qui sommes nous ?</span>
+        <span class="image-textapropos">Qui sommes nous ?</span>
       </section>
 
       <div class="section-ev">
@@ -143,7 +146,7 @@
     <div class="section-ev">
         <div class="container-ev">
             <div class="column-ev">
-                <h2 class="title-ev">Ce qui nous distingue.</h2>
+                <h2 class="title-ev">Spécificité</h2>
                 <div class="text-ev">
                   <p>Fondée en 2019 et basée au Maroc, BlueProtein produit et commercialise des solutions d'engrais biologiques, y compris des biofertilisants et biostimulants, à base de guano d'insectes. Leurs produits sont conçus pour une large gamme de cultures et sont destinés aux agriculteurs, collectivités et revendeurs.</p>
                   <p>Fondée en 2019 et basée au Maroc, BlueProtein produit et commercialise des solutions d'engrais biologiques, y compris des biofertilisants et biostimulants, à base de guano d'insectes. Leurs produits sont conçus pour une large gamme de cultures et sont destinés aux agriculteurs, collectivités et revendeurs.</p>

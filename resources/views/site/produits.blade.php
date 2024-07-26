@@ -22,6 +22,7 @@
 
 <body>
     <!-- navbar -->
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand me-auto" href="#"> <img src="./immmmage/6fef3dd9faf34f158d1563fcd8052d6c.jpeg" alt="logo" class="logo"></a>
@@ -36,33 +37,38 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 " aria-current="page" href="./apropos">A propos</a>
+                            <a class="nav-link mx-lg-2" aria-current="page" href="./apropos">A propos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="./try">Accueil</a>
+                            <a class="nav-link mx-lg-2 active" href="./try">Accueil</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link mx-lg-2 active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link mx-lg-2  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Produits
                             </a>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="./produits">Germination</a></li>
                               <li><a class="dropdown-item" href="./produits">Semis</a></li>
-                              <li><a class="dropdown-item" href="./produits">Végétative</a></li>
+                              <li>
+                                <hr class="dropdown-divider">
+                              </li>
+                              <li><a class="dropdown-item" href="./produits">Végététative</a></li>
                               <li><a class="dropdown-item" href="./produits">Floraison</a></li>
                             </ul>
                           </li>
+                         
                         <li class="nav-item dropdown">
                             <a class="nav-link mx-lg-2  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Services
                             </a>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="./Services">Agriculteur</a></li>
-                              <li><a class="dropdown-item" href="./Services">Revendeurs</a></li>
+                              <li><a class="dropdown-item" href="./Services">Revendeur</a></li>
+                            
                             </ul>
                           </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="./partenaires">Nos produits sur vos sols</a>
+                            <a class="nav-link mx-lg-2" href="./sol">Nos produits sur vos sols</a>
                         </li>
 
                     </ul>
@@ -71,7 +77,10 @@
             </div>
             <a href="#" class="login-button">Nous Rejoindre </a>
             <a href="#" class="login-button">Contact</a>
-
+            <span class="language-selector">
+              <a href="#" class="language-button">FR <span>&#9660;</span></a>
+              <a href="#" class="language-dropdown">  <button>EN</button></a>
+          </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
