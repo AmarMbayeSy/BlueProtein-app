@@ -36,13 +36,16 @@ Route::middleware('auth')->group(function () {
         return view('dashboard-blogen-theme-master.posts');
     });
     Route::get('/', [ProduitController::class, 'create'])->name('produits.create');
-    Route::get('/produits/{produit}', [ProduitController::class, 'show'])->name('produits.show');
+    // Route::get('/produits/{produit}', [ProduitController::class, 'show'])->name('produits.show');
     Route::delete('/produits/{produit}', [ProduitController::class, 'destroy'])->name('produits.destroy');
 });
 
 require __DIR__.'/auth.php';
 
- Route::get('/try', [ProduitController::class, 'create_accueil']);
+Route::get('/try', [ProduitController::class, 'create_accueil']);
+Route::get('/produits', [ProduitController::class, 'Show_produit_per_etape']);
+Route::get('/produits/{id_produits}', [ProduitController::class, 'show'])->name('site.produit1');
+
 Route::post('/compositions', [CompositionController::class, 'store'])->name('compositions.store');
 Route::post('/avantages', [AvantageController::class, 'store'])->name('avantages.store');
 Route::post('/utilisations', [UtilisationController::class, 'store'])->name('utilisations.store');
@@ -63,9 +66,22 @@ Route::get('/apropos', function () {
 Route::get('/partenaires', function () {
     return view('site.partenaires');
 });
-Route::get('/produits', function () {
-    return view('site.produits');
-});
+
 Route::get('/Services', function () {
     return view('site.Services');
+});
+
+Route::get('/collectif', function () {
+    return view('site.collectif');
+});
+Route::get('/eleveur', function () {
+    return view('site.eleveur');
+});
+
+Route::get('/agriculteur', function () {
+    return view('site.agriculteur');
+});
+
+Route::get('/sol', function () {
+    return view('site.sol');
 });

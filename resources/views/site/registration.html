@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image et Texte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            position: relative;
+          
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .image {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            animation: borderAnimation 5s infinite;
+            margin-right: -70px; /* Décalage de l'image vers la gauche */
+        }
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+     
+        .text {
+            position: relative;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin-left: 40px; /* Ajustement pour compenser le décalage de l'image */
+        }
+        .text h2 {
+            margin: 0;
+            color: #333;
+        }
+        .text h3 {
+            margin: 10px 0 0 0;
+            color: #333;
+        }
+        .text h4 {
+            margin: 10px 0;
+            color: #ffd700;
+        }
+        .text p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image">
+        <img src="./immmmage/agriculteur.jpeg" alt="Image">
+    </div>
+    <div class="text">
+        <h2>Les tests</h2>
+        <h3>Tests d’industrialisation</h3>
+        <h4>Tests pour dossiers d’homologation</h4>
+        <p>En parallèle de la montée en échelle, la préparation des dossiers d’homologation implique la réalisation de nombreux tests, y compris de validation de l’absence de toxicité et écotoxicité des substances actives et des produits formulés. Ces dossiers sont préparés progressivement en s’appuyant sur l’expertise du service réglementaire du groupe.</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -39,12 +39,12 @@ class ProduitController extends Controller
         $produits = Produit::all();
         $nombreProduits = $produits->count();
         return view('dashboard-blogen-theme-master.index', compact('avantages', 'compositions', 'utilisations',
-        'precautions', 'applications', 'cultures', 'etapes', 
-        'certifications', 'produits', 'nombreProduits',
-        'nombreCertifications','nombreEtapes','nombreCultures',
-        'nombreApplications','nombrePrecautions','nombreUtilisations',
-        'nombreCompositions','nombreAvantages'));
-    }
+            'precautions', 'applications', 'cultures', 'etapes', 
+            'certifications', 'produits', 'nombreProduits',
+            'nombreCertifications','nombreEtapes','nombreCultures',
+            'nombreApplications','nombrePrecautions','nombreUtilisations',
+            'nombreCompositions','nombreAvantages'));
+        }
 
     public function create_accueil()
     {
@@ -69,13 +69,62 @@ class ProduitController extends Controller
         $blocs = Bloc::all();
         $nombreBlocs = $blocs->count();
         
+        $etape = Etape::where('etape_produit', 'Germination')->first();
+        if ($etape) {
+            $germinations = Produit::where('id_etape', $etape->id)->get();
+        } else {
+            $germinations = collect();
+        }
+   
         return View::make('site.try')->with(compact('avantages', 'compositions', 'utilisations',
-        'precautions', 'applications', 'cultures', 'etapes', 
-        'certifications', 'produits', 'nombreProduits',
-   'nombreCertifications','nombreEtapes','nombreCultures',
-'nombreApplications','nombrePrecautions','nombreUtilisations',
-'nombreCompositions','nombreAvantages','blocs','nombreBlocs'));
+            'precautions', 'applications', 'cultures', 'etapes', 
+            'certifications', 'produits', 'nombreProduits',
+            'nombreCertifications','nombreEtapes','nombreCultures','germinations',
+            'nombreApplications','nombrePrecautions','nombreUtilisations',
+            'nombreCompositions','nombreAvantages','blocs','nombreBlocs'));
     }
+
+    public function Show_produit_per_etape() {
+        $produits = Produit::all();
+        $etape = Etape::where('etape_produit', 'Germination')->first();
+        if ($etape) {
+            $germinations = Produit::where('id_etape', $etape->id)->get();
+        } else {
+            $germinations = collect();
+        }
+
+        $etape = Etape::where('etape_produit', 'Semis')->first();
+        if ($etape) {
+            $semis = Produit::where('id_etape', $etape->id)->get();
+        } else {
+            $semis = collect();
+        }
+
+        $etape = Etape::where('etape_produit', 'Floraison')->first();
+        if ($etape) {
+            $floraisons = Produit::where('id_etape', $etape->id)->get();
+        } else {
+            $floraisons = collect();
+        }
+
+        $etape = Etape::where('etape_produit', 'Vegetative')->first();
+        if ($etape) {
+            $vegetatives = Produit::where('id_etape', $etape->id)->get();
+        } else {
+            $vegetatives = collect();
+        }
+        return view('site.produits', compact('vegetatives', 'floraisons',
+                        'semis','germinations','produits'));
+        
+    }
+
+    public function show($id_produits)
+    {
+        $produit = Produit::findOrFail($id_produits);
+        return view('site.produit1', compact('produit'));
+    }
+    
+    
 
     // Stocker le produit
     public function store(Request $request)

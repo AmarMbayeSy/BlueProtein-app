@@ -6,7 +6,8 @@
     --white:#ffffff;
   }
 .navbar{
-    background:linear-gradient(90deg, var(--orange) 0%, var(--blue) 100%);
+    background: rgb(255,128,0);
+    background: linear-gradient(90deg, rgba(255,128,0,1) 15%, rgba(33,40,191,1) 62%);
     height: 80px;
     margin: 5px;
     padding: 0.2rem;
@@ -122,7 +123,7 @@
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background: blue;
+    background: var(--blue);
     visibility: hidden;
     transition: 0.3s ease-in-out;
 }
@@ -162,6 +163,11 @@ background-color: #ddd;
   .image-text {
     font-weight: bold;
   }
+  .image-textapropos {
+    font-weight: bold;
+    color: #3a3939;
+
+  }
   
   /* Assombrir les images */
   .carousel-item img {
@@ -175,6 +181,9 @@ background-color: #ddd;
   @media (min-width: 768px) {
     .image-text {
       font-size: 2rem;
+    }
+    .image-textapropos {
+      font-size: 4rem;
     }
   }
   
@@ -190,7 +199,7 @@ background-color: #ddd;
   #message{
     display: flex;
     justify-content: center;
-    align-items: center;
+
     padding: 60px;
   }
 
@@ -232,6 +241,23 @@ background-color: #ddd;
     }
 
 
+    .background-produits {
+      background: url('../immmmage/background_produit.jpg') no-repeat center center fixed;
+    background-size: cover; /* Couvre tout l'espace disponible */
+    width: 100vw; /* Largeur de 100% de la largeur de la fenêtre */
+    height: 63vh; /* Hauteur de 100% de la hauteur de la fenêtre */
+    display: inline-block; 
+    position: relative;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    filter: brightness(50%);
+   
+      }
+  
+  
+
+
     .text-overlay {
         position: absolute;
         bottom: 10rem;
@@ -244,7 +270,7 @@ background-color: #ddd;
 
 
     .text-overlay h2 {
-        color: #1E90FF;
+        color: #2128BF;
         font-size: 3rem;
     }
     /* Media queries for mobile devices */

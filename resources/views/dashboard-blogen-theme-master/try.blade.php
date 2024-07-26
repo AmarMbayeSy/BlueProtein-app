@@ -15,19 +15,7 @@
     <link rel="stylesheet" href="css/style-swipe.css">
     <link rel="stylesheet" href="css/style-actualité.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .button {
-    border: none;
-    font-size: 16px;
-    color: #FFF;
-    padding: 6px 14px;
-    background-color: #4070F4;
-    border-radius: 6px;
-    margin: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-    </style>
+    
       
 </head>
 
@@ -78,7 +66,7 @@
                             </ul>
                           </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="./sol">Nos produits sur vos sols</a>
+                            <a class="nav-link mx-lg-2" href="./partenaires">Nos produits sur vos sols</a>
                         </li>
 
                     </ul>
@@ -130,52 +118,42 @@
       </section>
        <!-- End image -->
 <!-- agri-section -->
-<!-- agri-section -->
-<section class="agri-section">
-  <div class="card-container">
-      <a href="./agriculteur" class="card">
-          <div>
-              <img src="./immmmage/agriculteur.jpeg" alt="Agriculture" class="card-image">
-              <div class="overlay"></div>
-              <div class="card-text">
-                  <img src="./immmmage/plante.png" alt="Icon" class="icon">
-                  <p>Agriculteur</p>
-              </div>
-          </div>
-      </a>
-      <a href="./eleveur" class="card">
-          <div>
-              <img src="./immmmage/elevage.jpeg" alt="Livestock and Nutrition" class="card-image">
-              <div class="overlay"></div>
-              <div class="card-text">
-                  <img src="./immmmage/fish.png" alt="Icon" class="icon">
-                  <p>Élevage</p>
-              </div>
-          </div>
-      </a>
-      <a href="./collectif" class="card">
-          <div>
-              <img src="./immmmage/collectif.jpeg" alt="Community" class="card-image">
-              <div class="overlay"></div>
-              <div class="card-text">
-                  <img src="./immmmage/presi.png" alt="Icon" class="icon">
-                  <p>Collectivité</p>
-              </div>
-          </div>
-      </a>
-      <a href="./partenaires" class="card">
-          <div>
-              <img src="./immmmage/distributeur.jpg" alt="Community" class="card-image">
-              <div class="overlay"></div>
-              <div class="card-text">
-                  <img src="./immmmage/profit.png" alt="Icon" class="icon">
-                  <p>Distributeur</p>
-              </div>
-          </div>
-      </a>
-  </div>
-</section>
-    <!-- End agri-section -->
+       <section class="agri-section">
+        <div class="card-container">
+            <div class="card">
+                <img src="./immmmage/agriculteur.jpeg" alt="Agriculture" class="card-image">
+                <div class="overlay"></div>
+                <div class="card-text">
+                    <img src="./immmmage/plante.png" alt="Icon" class="icon">
+                    <p>Agriculteur</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./immmmage/elevage.jpeg" alt="Livestock and Nutrition" class="card-image">
+                <div class="overlay"></div>
+                <div class="card-text">
+                    <img src="./immmmage/fish.png" alt="Icon" class="icon">
+                    <p>Élevage</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./immmmage/collectif.jpeg" alt="Community" class="card-image">
+                <div class="overlay"></div>
+                <div class="card-text">
+                    <img src="./immmmage/presi.png" alt="Icon" class="icon">
+                    <p>Collectivité</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./immmmage/collectif.jpeg" alt="Community" class="card-image">
+                <div class="overlay"></div>
+                <div class="card-text">
+                    <img src="./immmmage/profit.png" alt="Icon" class="icon">
+                    <p>Collectivité</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- End agri-section -->
     <section>
       <div class="product"> <img src="./immmmage/fleur.png" alt="fleur" class="logo">Nos produits dediés à votre agriculture</div>
@@ -190,11 +168,49 @@
                     <div class="unique-text-content">
                         <h3>{{ $produit->nom_produit }}</h3>
                         <p>{{ $produit->description1_produit }}</p>
-<button class="button">View More</button></a>
+                        <button class="unique-btn">Read more</button>
                     </div>
                 </div>
             @endforeach
         </div>
+    </div>
+</section>
+
+
+<section class="germination">
+    <div class="title">
+        <h2>
+            <span class="logo1"><img src="{{ asset('immmmage/seed.png') }}" alt="logo"></span>  
+            Germination 
+            <span class="logo1"><img src="{{ asset('immmmage/seed.png') }}" alt="logo"></span> 
+        </h2>
+    </div>
+    
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                @foreach($germinations as $produit)
+                    <div class="card swiper-slide" style="padding: 0;">
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="{{ asset('storage/' . $produit->image_produit) }}" alt="{{ $produit->nom_produit }}" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">{{ $produit->nom_produit }}</h2>
+                            <p class="description">{{ $produit->description1_produit }}</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
     </div>
 </section>
 

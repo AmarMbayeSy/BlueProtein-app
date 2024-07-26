@@ -25,9 +25,9 @@
 }
 
 .unique-content {
-    height: 28rem;
-    width: 25rem;
-    background-color: #000000;
+    height: 31rem;
+    width: 23rem;
+    background-color: #ffffff;
     border: .2rem solid rgba(0, 0, 0, 0.1);
     border-radius: .7rem;
     border-bottom: .4rem solid blue;
@@ -49,11 +49,13 @@
 }
 
 .unique-text-content h3 {
+    color: black;
     font-size: 1.7rem;
     font-weight: 500;
 }
 
 .unique-text-content p {
+    color: black;
     max-width: 22rem;
     font-size: .8rem;
     font-weight: 400;

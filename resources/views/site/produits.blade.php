@@ -112,160 +112,44 @@
     <!-- End barre de recherche -->
 
 
-<section class="germination">
-  <div class="title">
-    <h2> 
-      <span class="logo1"><img src="./immmmage/seed.png" alt="logo"></span>  
-      Germination 
-      <span class="logo1"><img src="./immmmage/seed.png" alt="logo"></span> 
-    </h2>
-  </div>
-  
+    <section class="germination">
+    <div class="title">
+        <h2>
+            <span class="logo1"><img src="{{ asset('immmmage/seed.png') }}" alt="logo"></span>  
+            Germination 
+            <span class="logo1"><img src="{{ asset('immmmage/seed.png') }}" alt="logo"></span> 
+        </h2>
+    </div>
+    
     <div class="slide-container swiper">
-      <div class="slide-content">
-          <div class="card-wrapper swiper-wrapper">
-              <div class="card swiper-slide" style="padding: 0;">
-                  <div class="image-content">
-                      <div class="card-image">
-                          <img src="./immmmage/image.jpeg" alt="" class="card-img">
-                      </div>
-                  </div>
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                @foreach($germinations as $produit)
+                    <div class="card swiper-slide" style="padding: 0;">
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="{{ asset('storage/' . $produit->image_produit) }}" alt="{{ $produit->nom_produit }}" class="card-img">
+                            </div>
+                        </div>
 
-                  <div class="card-content">
-                      <h2 class="name">David Dell</h2>
-                      <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="card-content">
+                            <h2 class="name">{{ $produit->nom_produit }}</h2>
+                            <p class="description">{{ $produit->description1_produit }}</p>
 
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide" style="padding: 0;">
-                  <div class="image-content">
-                      <div class="card-image">
-                          <img src="./immmmage/image.jpeg" alt="" class="card-img">
-                      </div>
-                  </div>
+                            <button class="button">
+                                <a href="{{ route('site.produit1', ['id_produits' => $produit->id]) }}">View More</a>
+                            </button>
 
-                  <div class="card-content">
-                      <h2 class="name">David Dell</h2>
-                      <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
 
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide" style="padding: 0;">
-                  <div class="image-content">
-                      <div class="card-image">
-                        <img src="./immmmage/image.jpeg" alt="" class="card-img">
-                         
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">David Dell</h2>
-                      <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide" style="padding: 0;">
-                  <div class="image-content">
-                      <div class="card-image">
-                          <img src="./immmmage/image.jpeg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">David Dell</h2>
-                      <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide" style="padding: 0;">
-                  <div class="image-content">
-                    
-
-                      <div class="card-image">
-                          <img src="./immmmage/image.jpeg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">David Dell</h2>
-                      <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide" style="padding: 0;">
-                  <div class="image-content">
-                    
-
-                      <div class="card-image">
-                          <img src="./immmmage/image.jpeg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">David Dell</h2>
-                      <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide" style="padding: 0;">
-                  <div class="image-content">
-                     
-
-                      <div class="card-image">
-                          <img src="./immmmage/image.jpeg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">David Dell</h2>
-                      <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide" style="padding: 0;">
-                  <div class="image-content">
-                   
-
-                      <div class="card-image">
-                          <img src="./immmmage/image.jpeg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">David Dell</h2>
-                      <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide" style="padding: 0;">
-                  <div class="image-content " >                   
-                      <div class="card-image">
-                          <img src="./immmmage/image.jpeg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">David Dell</h2>
-                      <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="swiper-button-next swiper-navBtn"></div>
-      <div class="swiper-button-prev swiper-navBtn"></div>
-      <div class="swiper-pagination"></div>
-  </div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+    </div>
 </section>
 
 <section class="germination">

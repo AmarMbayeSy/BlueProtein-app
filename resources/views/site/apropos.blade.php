@@ -143,7 +143,7 @@
     <div class="section-ev">
         <div class="container-ev">
             <div class="column-ev">
-                <h2 class="title-ev">Spécificité</h2>
+                <h2 class="title-ev">Ce qui nous distingue.</h2>
                 <div class="text-ev">
                   <p>Fondée en 2019 et basée au Maroc, BlueProtein produit et commercialise des solutions d'engrais biologiques, y compris des biofertilisants et biostimulants, à base de guano d'insectes. Leurs produits sont conçus pour une large gamme de cultures et sont destinés aux agriculteurs, collectivités et revendeurs.</p>
                   <p>Fondée en 2019 et basée au Maroc, BlueProtein produit et commercialise des solutions d'engrais biologiques, y compris des biofertilisants et biostimulants, à base de guano d'insectes. Leurs produits sont conçus pour une large gamme de cultures et sont destinés aux agriculteurs, collectivités et revendeurs.</p>

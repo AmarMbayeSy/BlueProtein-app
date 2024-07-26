@@ -37,10 +37,10 @@
     flex-direction: column;
     gap: 10px;
     flex-basis: 50%;
-    margin-left: calc(21% + 4%);    
+    margin-left: calc(21% + 4%);
 }
 
-.additional-news-card {
+.large-news-card {
     height: 700px;
 }
 
